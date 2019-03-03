@@ -28,6 +28,12 @@ for (var i = 3; i < cmdArgs.length; i++) {
 	liriArg += cmdArgs[i] + ' ';
 }
 
+// Helper function that gets the artist name
+var getArtistNames = function(artist) {
+  return artist.name;
+};
+
+
 // OMDB retrieval //
 var getMovieInfo = function(liriArg) {
 // request with axios to the OMDB API with the movie specified //
@@ -51,15 +57,37 @@ Actors: ${response.data.Actors}`);
 )};
 
 // BandsInTown retrieval //
-var getConcertInfo = function(liriArg) {
-// request with axios to the BandsInTown API with the artist/band name specified //
-var bandsUrl = "https://rest.bandsintown.com/artists/" + liriArg + "/events?app_id=BIT_ID";
-// prints the event information //
-axios.get(bandsUrl).then(
-  function(response) {
-    console.log('\x1b[33m%s\x1b[0m',`Name: ${data.Name}`);
-  }
-)};
+var getConcertInfo = function(artist) {
+  var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=BIT_ID";
+
+  axios.get(queryURL).then(
+    function(response) {
+      var jsonData = response.data;
+
+      if (!jsonData.length) {
+        console.log('\x1b[32m%s\x1b[0m', `No results found for ${artist}`);
+        return;
+      }
+
+console.log('\x1b[32m%s\x1b[0m', `Upcoming concerts for ${artist}:
+------------------------
+Concert Information
+------------------------`);
+
+      for (var i = 0; i < jsonData.length; i++) {
+        var show = jsonData[i];
+
+console.log('\x1b[32m%s\x1b[0m',
+`${show.venue.city}, ${(show.venue.region || show.venue.country)}
+`,
+`at ${show.venue.name} ${moment(show.datetime).format("MM/DD/YYYY")}
+`
+        );
+      }
+    }
+  );
+};
+
 
 // Spotify retrieval //
 function getSongInfo(liriArg) {
@@ -101,9 +129,11 @@ function getSongInfo(liriArg) {
 				// Pretty print the song information //
 				var outputStr = '------------------------\n' + 
 								'Song Information:\n' + 
-								'------------------------\n\n' + 
-								'Song Name: ' + songInfo.name + '\n'+ 
-								'Artist: ' + songInfo.artists[0].name + '\n';
+								'------------------------\n' + 
+								'Artist: ' + songInfo.artists[0].name + '\n' +
+								'Song: ' + songInfo.name + '\n' + 
+								'Preview: ' + songInfo.preview_url + '\n' +
+								'Album: ' + songInfo.album[0];
 
 				// Append the output to the log file //
 				fs.appendFile('./log.txt', 'LIRI Response:\n\n' + outputStr + '\n', (err) => {
@@ -116,17 +146,43 @@ function getSongInfo(liriArg) {
 }
 
 
-// Determine which LIRI command is being requested by the user //
-if (liriCmd === 'movie-this') {
-	getMovieInfo(liriArg); 
+// Function for running a command based on text file
+var doWhatItSays = function() {
+  fs.readFile("random.txt", "utf8", function(error, data) {
+    console.log(data);
 
-} else if (liriCmd === 'spotify-this-song') {
-	getSongInfo(liriArg);
+    var dataArr = data.split(",");
 
-} else if (liriCmd === 'concert-this') {
-	getConcertInfo(liriArg);
-
-} else if (liriCmd ===  'do-what-it-says') {
-	doWhatItSays();
-
+    if (dataArr.length === 2) {
+      pick(dataArr[0], dataArr[1]);
+    } else if (dataArr.length === 1) {
+      pick(dataArr[0]);
+    }
+  });
 };
+
+// Function for determining which command is executed
+var pick = function(caseData, functionData) {
+  switch (caseData) {
+  case "concert-this":
+    getConcertInfo(functionData);
+    break;
+  case "spotify-this-song":
+    getSongInfo(functionData);
+    break;
+  case "movie-this":
+    getMovieInfo(functionData);
+    break;
+  case "do-what-it-says":
+    doWhatItSays();
+    break;
+  default:
+    console.log("LIRI doesn't know that");
+  }
+};
+
+var runThis = function(argOne, argTwo) {
+  pick(argOne, argTwo);
+};
+
+runThis(process.argv[2], process.argv.slice(3).join(" "));

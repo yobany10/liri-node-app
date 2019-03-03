@@ -9,3 +9,207 @@ Song Information:
 Song Name: The Sign
 Artist: Ace of Base
 
+User Command: node liri.js spotify-this-song known 
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Song Name: Known
+Artist: Tauren Wells
+
+User Command: node liri.js spotify-this-song known 
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Song Name: Known
+Artist: undefined
+
+User Command: node liri.js spotify-this-song known 
+
+ERROR: Retrieving Spotify track -- TypeError: Cannot read property 'name' of undefinedUser Command: node liri.js spotify-this-song known 
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Song Name: Known
+Artist: Tauren Wells
+
+User Command: node liri.js spotify-this-song known 
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+
+User Command: node liri.js spotify-this-song known 
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: [object Object]
+User Command: node liri.js spotify-this-song known 
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
+User Command: node liri.js spotify-this-song known 
+
+ERROR: Retrieving Spotify track -- TypeError: Cannot read property 'name' of undefinedUser Command: node liri.js spotify-this-song known 
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
+User Command: node liri.js spotify-this-song known 
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
+User Command: node liri.js spotify-this-song known 
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
+User Command: node liri.js spotify-this-song known 
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
+User Command: node liri.js spotify-this-song known 
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
+User Command: node liri.js spotify-this-song known 
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
+User Command: node liri.js spotify-this-song known
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
+User Command: node liri.js spotify-this-song known
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
+User Command: node liri.js spotify-this-song known
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
+User Command: node liri.js spotify-this-song known
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
+User Command: node liri.js spotify-this-song known
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
