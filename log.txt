@@ -213,3 +213,14 @@ Artist: Tauren Wells
 Song: Known
 Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
 Album: undefined
+User Command: node liri.js spotify-this-song known
+
+LIRI Response:
+
+------------------------
+Song Information:
+------------------------
+Artist: Tauren Wells
+Song: Known
+Preview: https://p.scdn.co/mp3-preview/9ad10034b651b91aa6ef9ff97fe1a61c567b178a?cid=cd8edd03a0434fdd93e546e65e7ee52a
+Album: undefined
